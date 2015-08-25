@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zorilla.CMS.BL", "Zorilla.CMS.BL\Zorilla.CMS.BL.csproj", "{1B9FD1C2-5362-4054-8CB8-4A55D0F21416}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zorilla.CMS.PL", "Zorilla.CMS.PL\Zorilla.CMS.PL.csproj", "{87EA326F-73EB-466F-98BD-864CF18B87C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zorilla.CMS.PL.Tests", "Zorilla.CMS.PL.Tests\Zorilla.CMS.PL.Tests.csproj", "{D945A4AF-BF24-4C1B-AC12-4A5A77B319AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActiveRecord.Linq", "ActiveRecord.Linq\ActiveRecord.Linq.csproj", "{E6EFDB80-830F-4E12-BE4B-C5716078D98E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zorilla.CMS.BL.Test", "Zorilla.CMS.BL.Test\Zorilla.CMS.BL.Test.csproj", "{B42F8277-447A-44DC-BEEE-ECF0BB79063A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Util", "Util", "{E8EF8FC7-AA88-428F-A77E-4A86EFA65FE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zorilla.Util", "Zorilla.Util\Zorilla.Util.csproj", "{C47248A7-6E9E-45E5-9BF5-40E271839D5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zorilla.Util.Test", "Zorilla.Util.Test\Zorilla.Util.Test.csproj", "{528900CD-7E96-4021-A9BF-FAC0F6D05755}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B9FD1C2-5362-4054-8CB8-4A55D0F21416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B9FD1C2-5362-4054-8CB8-4A55D0F21416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B9FD1C2-5362-4054-8CB8-4A55D0F21416}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B9FD1C2-5362-4054-8CB8-4A55D0F21416}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87EA326F-73EB-466F-98BD-864CF18B87C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87EA326F-73EB-466F-98BD-864CF18B87C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87EA326F-73EB-466F-98BD-864CF18B87C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87EA326F-73EB-466F-98BD-864CF18B87C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D945A4AF-BF24-4C1B-AC12-4A5A77B319AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D945A4AF-BF24-4C1B-AC12-4A5A77B319AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D945A4AF-BF24-4C1B-AC12-4A5A77B319AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D945A4AF-BF24-4C1B-AC12-4A5A77B319AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6EFDB80-830F-4E12-BE4B-C5716078D98E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6EFDB80-830F-4E12-BE4B-C5716078D98E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6EFDB80-830F-4E12-BE4B-C5716078D98E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6EFDB80-830F-4E12-BE4B-C5716078D98E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B42F8277-447A-44DC-BEEE-ECF0BB79063A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B42F8277-447A-44DC-BEEE-ECF0BB79063A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B42F8277-447A-44DC-BEEE-ECF0BB79063A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B42F8277-447A-44DC-BEEE-ECF0BB79063A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C47248A7-6E9E-45E5-9BF5-40E271839D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C47248A7-6E9E-45E5-9BF5-40E271839D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C47248A7-6E9E-45E5-9BF5-40E271839D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C47248A7-6E9E-45E5-9BF5-40E271839D5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{528900CD-7E96-4021-A9BF-FAC0F6D05755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{528900CD-7E96-4021-A9BF-FAC0F6D05755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{528900CD-7E96-4021-A9BF-FAC0F6D05755}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{528900CD-7E96-4021-A9BF-FAC0F6D05755}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C47248A7-6E9E-45E5-9BF5-40E271839D5F} = {E8EF8FC7-AA88-428F-A77E-4A86EFA65FE1}
+		{528900CD-7E96-4021-A9BF-FAC0F6D05755} = {E8EF8FC7-AA88-428F-A77E-4A86EFA65FE1}
+	EndGlobalSection
+EndGlobal

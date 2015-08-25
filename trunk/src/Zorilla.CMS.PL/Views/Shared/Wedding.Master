@@ -1,0 +1,78 @@
+﻿<%@ Import Namespace="Zorilla.CMS.BL.Context"%>
+<%@ Import Namespace="Zorilla.CMS.BL.Services"%>
+<%@ Import Namespace="Zorilla.CMS"%>
+<%@ Import Namespace="Zorilla.CMS.Helpers"%>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Wedding.master.cs" Inherits="Zorilla.CMS.Views.Shared.Wedding" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Dan & Maja 2009</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="../../Content/wedding.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="../../../Scripts/jquery-1.2.6.js"></script>  
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6100394-3");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+</head>
+<body>
+<!-- start header -->
+<div id="header">	
+	
+	<div id="logo">
+	   <div id="topmenu">
+	    <small>
+	    
+	        <% Html.RenderPartial("CmsControls/LanguageUserControl"); %>
+		 
+		    <% Html.RenderPartial("CmsControls/LoginUserControl"); %> 
+		
+	        <% if (CmsContext.Current.CurrentUser.CanEdit) { %>
+	        | <% Html.RenderPartial("CmsControls/CmsModeCtl"); %>
+	        | <%= Html.ActionLink("Administration", "Index", "Admin")%>
+	    
+	        <% } %>
+	    </small>
+		</div>
+	
+		<h1><a href="/"><% Html.CmsText("main.title"); %></a></h1>
+	</div>
+	
+</div>
+<div id="wrapper">
+	<div id="sidebar">    	
+		<div id="menu">
+		    <% Html.RenderPartial("CmsControls/CmsMenu", MvcApplication.Container.GetService<IChannelService>()); %>
+		</div>		
+	</div>
+
+    
+    <!-- start content -->
+	<div id="content">
+		 <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+	</div>
+	<div style="height: 1px; clear: both;"></div>
+	<!-- end content -->
+	
+</div>
+<div style="clear: both; height: 30px">&nbsp;</div>
+<!-- end page -->
+<div id="footer">
+    <hr />
+	<p id="legal">Copyright &copy; 2009 All rights reserved - Maja Strang & Dan Søndergaard</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,435 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{87EA326F-73EB-466F-98BD-864CF18B87C2}</ProjectGuid>
+    <ProjectTypeGuids>{603c0e0b-db56-11dc-be95-000d561079b0};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zorilla.CMS</RootNamespace>
+    <AssemblyName>Zorilla.CMS</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.ActiveRecord, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Castle.ActiveRecord.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Components.Validator, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Castle.Components.Validator.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.MicroKernel, Version=0.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Castle.MicroKernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.0.3, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib, Version=0.0.1.174, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\MvcContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib.Castle, Version=0.0.1.174, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\MvcContrib.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=2.1.0.1001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ProxyGenerators.CastleDynamicProxy, Version=2.1.0.1001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NHibernate.ProxyGenerators.CastleDynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft ASP.NET\ASP.NET MVC Beta\Assemblies\System.Web.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Microsoft ASP.NET\ASP.NET MVC RC\Assemblies\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft ASP.NET\ASP.NET MVC Beta\Assemblies\System.Web.Routing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bryllup\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bryllup\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CastleWindsorControllerFactory.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\BryllupController.cs" />
+    <Compile Include="Controllers\ChannelController.cs" />
+    <Compile Include="Controllers\CmsController.cs" />
+    <Compile Include="Controllers\LanguageController.cs" />
+    <Compile Include="Controllers\PostingController.cs" />
+    <Compile Include="Controllers\RegistrationController.cs" />
+    <Compile Include="Controllers\TemplateController.cs" />
+    <Compile Include="Controllers\TextController.cs" />
+    <Compile Include="Controllers\WishListController.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\ZorillaHandler.cs" />
+    <Compile Include="Helpers\CmsHelper.cs" />
+    <Compile Include="Helpers\ExpanderHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Channel\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Channel\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Channel\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Channel\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Channel\New.aspx.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Channel\New.aspx.designer.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Channel\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Channel\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\CmsControls\CmsMenu.ascx.cs">
+      <DependentUpon>CmsMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\CmsControls\CmsMenu.ascx.designer.cs">
+      <DependentUpon>CmsMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\CmsControls\CmsModeCtl.ascx.cs">
+      <DependentUpon>CmsModeCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\CmsControls\CmsModeCtl.ascx.designer.cs">
+      <DependentUpon>CmsModeCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\CmsControls\PostingPropertyCtl.ascx.cs">
+      <DependentUpon>PostingPropertyCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\CmsControls\PostingPropertyCtl.ascx.designer.cs">
+      <DependentUpon>PostingPropertyCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\CmsControls\RichTextEditor.ascx.cs">
+      <DependentUpon>RichTextEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\CmsControls\RichTextEditor.ascx.designer.cs">
+      <DependentUpon>RichTextEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\CmsControls\CmsTextCtl.ascx.cs">
+      <DependentUpon>CmsTextCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\CmsControls\CmsTextCtl.ascx.designer.cs">
+      <DependentUpon>CmsTextCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\CmsControls\LoginUserControl.ascx.cs">
+      <DependentUpon>LoginUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\CmsControls\LoginUserControl.ascx.designer.cs">
+      <DependentUpon>LoginUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\CmsControls\LanguageUserControl.ascx.cs">
+      <DependentUpon>LanguageUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\CmsControls\LanguageUserControl.ascx.designer.cs">
+      <DependentUpon>LanguageUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Templates\BaseTemplate.ascx.cs">
+      <DependentUpon>BaseTemplate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Templates\BaseTemplate.ascx.designer.cs">
+      <DependentUpon>BaseTemplate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Templates\AccordionTemplate.ascx.cs">
+      <DependentUpon>AccordionTemplate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Templates\AccordionTemplate.ascx.designer.cs">
+      <DependentUpon>AccordionTemplate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Templates\PracticalInfo.ascx.cs">
+      <DependentUpon>PracticalInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Templates\PracticalInfo.ascx.designer.cs">
+      <DependentUpon>PracticalInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Wedding.Master.cs">
+      <DependentUpon>Wedding.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Wedding.Master.designer.cs">
+      <DependentUpon>Wedding.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Template\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Template\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Template\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Template\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Template\New.aspx.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Template\New.aspx.designer.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Images\Style\img01.gif" />
+    <Content Include="Content\Images\Style\img02.jpg" />
+    <Content Include="Content\Images\Style\img03.jpg" />
+    <Content Include="Content\Images\Style\img06.gif" />
+    <Content Include="Content\Images\Style\spacer.gif" />
+    <Content Include="Content\Images\Languages\da.gif" />
+    <Content Include="Content\Images\Languages\sv.gif" />
+    <Content Include="Content\Images\Languages\en.gif" />
+    <Content Include="Scripts\jwysiwyg\jquery.wysiwyg.css" />
+    <Content Include="Scripts\jwysiwyg\jquery.wysiwyg.gif" />
+    <Content Include="Scripts\jwysiwyg\jquery.wysiwyg.jpg" />
+    <Content Include="Scripts\jwysiwyg\jquery.wysiwyg.js" />
+    <Content Include="Scripts\jwysiwyg\jquery.wysiwyg.pack.js" />
+    <Content Include="Scripts\rte.jquery\bold.gif" />
+    <Content Include="Scripts\rte.jquery\close.gif" />
+    <Content Include="Scripts\rte.jquery\image.png" />
+    <Content Include="Scripts\rte.jquery\index.html" />
+    <Content Include="Scripts\rte.jquery\italic.gif" />
+    <Content Include="Scripts\rte.jquery\jquery.rte.js" />
+    <Content Include="Scripts\rte.jquery\link.png" />
+    <Content Include="Scripts\rte.jquery\rte.css" />
+    <Content Include="Scripts\rte.jquery\unordered.gif" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Views\Channel\List.aspx" />
+    <Content Include="Views\Channel\Edit.aspx" />
+    <Content Include="Views\Channel\New.aspx" />
+    <Content Include="Views\Channel\Show.aspx" />
+    <Content Include="Views\Shared\CmsControls\CmsMenu.ascx" />
+    <Content Include="Views\Shared\CmsControls\CmsModeCtl.ascx" />
+    <Content Include="Views\Shared\CmsControls\RichTextEditor.ascx" />
+    <Content Include="Views\Shared\CmsControls\CmsTextCtl.ascx" />
+    <Content Include="Views\Shared\CmsControls\LoginUserControl.ascx" />
+    <Content Include="Views\Shared\Templates\BaseTemplate.ascx" />
+    <Content Include="Views\Template\Edit.aspx" />
+    <Content Include="Views\Template\List.aspx" />
+    <Content Include="Views\Template\New.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\jquery-1.2.6.js" />
+    <Content Include="Scripts\jquery-1.2.6.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\Login.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\CmsControls\LanguageUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Zorilla.CMS.BL\Zorilla.CMS.BL.csproj">
+      <Project>{1B9FD1C2-5362-4054-8CB8-4A55D0F21416}</Project>
+      <Name>Zorilla.CMS.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Zorilla.Util\Zorilla.Util.csproj">
+      <Project>{C47248A7-6E9E-45E5-9BF5-40E271839D5F}</Project>
+      <Name>Zorilla.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\rte.jquery\Thumbs.db" />
+    <Content Include="Bryllup\Default.aspx" />
+    <Content Include="Content\Images\Style\img04.jpg" />
+    <Content Include="Content\Images\Style\img05.jpg" />
+    <Content Include="Content\Images\Style\img2.jpg" />
+    <Content Include="Content\Images\Style\img200x150.jpg" />
+    <Content Include="Content\Images\Style\salt_pepper.jpg" />
+    <Content Include="Content\wedding.css" />
+    <Content Include="Content\Images\Languages\fi-sv.gif" />
+    <Content Include="Content\Images\Style\down.gif" />
+    <Content Include="Content\Images\Style\up.gif" />
+    <Content Include="Scripts\expandable.js" />
+    <Content Include="Scripts\jquery.ui.1.6rc2.js" />
+    <Content Include="Views\Admin\Index.aspx" />
+    <Content Include="Views\Registration\Index.aspx" />
+    <Content Include="Views\Registration\List.aspx" />
+    <Content Include="Views\Registration\Success.aspx" />
+    <Content Include="Views\Shared\CmsControls\PostingPropertyCtl.ascx" />
+    <Content Include="Views\Shared\Templates\AccordionTemplate.ascx" />
+    <Content Include="Views\Shared\Templates\PracticalInfo.ascx" />
+    <Content Include="Views\Shared\Wedding.Master" />
+    <Content Include="Views\WishList\Cancel.aspx" />
+    <Content Include="Views\WishList\CancelReservation.aspx" />
+    <Content Include="Views\WishList\CreateReservation.aspx" />
+    <Content Include="Views\WishList\Index.aspx" />
+    <Content Include="Views\WishList\Reserve.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Filters\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2287</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
